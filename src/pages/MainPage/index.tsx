@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { Main } from './components/Main';
 import { Box } from 'components';
 import { Faq } from 'pages/MainPage/components/Faq';
+import { Footer } from 'pages/MainPage/components/Footer';
 import { Help } from 'pages/MainPage/components/Help';
 import { Map } from 'pages/MainPage/components/Map';
 import { Subscribe } from 'pages/MainPage/components/Subscribe';
@@ -18,6 +19,7 @@ export function MainPage() {
       <Faq />
       <Tariff />
       <Subscribe />
+      <Footer />
     </Box>
   );
 }

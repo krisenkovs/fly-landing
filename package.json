@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "BatteryFly landing",
   "main": "index.js",
+  "homepage": "https://krisenkovs.github.io/fly-landing",
   "repository": {
     "type": "github",
-    "url": "https://github.com/krisenkovs/fly-landingb"
+    "url": "https://github.com/krisenkovs/fly-landing"
   },
   "browserslist": [
     "last 2 Chrome versions",
@@ -14,6 +15,8 @@
     "last 2 Safari versions"
   ],
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "analize": "npm run build && webpack --config webpack.bundle.js"
@@ -46,6 +49,7 @@
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.2.15",
