@@ -21,7 +21,7 @@ export function Item({ step, text }: Props) {
         boxSizing="border-box"
         style={{ minWidth: '80px' }}
       >
-        <Box position="absolute" style={{ right: 0 }}>
+        <Box position="absolute" style={{ right: 6 }}>
           <Typography color={COLORS.WHITE} size={48} lineHeight={80} weight={900}>
             {step}
           </Typography>

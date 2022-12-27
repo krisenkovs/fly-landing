@@ -106,6 +106,10 @@ module.exports = {
           to: 'favicon',
         },
         {
+          from: resolve(__dirname, 'public/static'),
+          to: 'static',
+        },
+        {
           from: resolve(__dirname, 'public/images'),
           to: 'images',
           noErrorOnMissing: true,
@@ -126,17 +130,7 @@ module.exports = {
               maxEntries: 40,
             },
           },
-        },
-        {
-          urlPattern: /api\/image/,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'images',
-            expiration: {
-              maxEntries: 10,
-            },
-          },
-        },
+        }
       ],
     }),
   ],

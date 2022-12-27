@@ -1,4 +1,4 @@
-import { TranslateProvider } from 'application/TranslateProvider';
+import { SettingsProvider } from 'application/SettingsProvider';
 import { Loader } from 'components';
 import { MainPage } from 'pages/MainPage';
 import React, { Suspense } from 'react';
@@ -6,9 +6,9 @@ import React, { Suspense } from 'react';
 export function Application() {
   return (
     <Suspense fallback={<Loader />}>
-      <TranslateProvider>
+      <SettingsProvider>
         <MainPage />
-      </TranslateProvider>
+      </SettingsProvider>
     </Suspense>
   );
 }

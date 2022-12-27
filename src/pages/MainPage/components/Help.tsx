@@ -1,22 +1,24 @@
-import { Box, TouchableOpacity, Typography } from 'components';
+import { useSettings } from 'application/SettingsProvider';
+import { Box, Link, TouchableOpacity, Typography } from 'components';
 import { COLORS } from 'constant';
 import React from 'react';
 
 export function Help() {
+  const settings = useSettings();
   return (
     <Box flexDirection="row" alignItems="center">
-      <img src="images/station.png" alt="station" />
+      <img src="images/station.png" alt="station" height={400} width={814} />
       <Box>
         <Typography size={36} lineHeight={46} weight={700} color={COLORS.BLACK}>
-          Бесплатная информационная линия
+          {settings?.help.title}
         </Typography>
         <Box marginTop={16}>
           <Typography size={24} lineHeight={30} weight={700} color={COLORS.BLACK}>
-            Техническая поддержка +375 33 564-45-32
+            {settings?.help.description}
           </Typography>
         </Box>
         <Box marginTop={32} flexDirection="row">
-          <TouchableOpacity>
+          <Link href={`mailto:${settings?.help?.mail}`}>
             <Box
               alignItems="center"
               justifyContent="center"
@@ -28,10 +30,10 @@ export function Help() {
               backgroundColor={COLORS.BLUE}
             >
               <Typography size={18} lineHeight={24} weight={700} color={COLORS.WHITE}>
-                Получить консультацию
+                {settings?.help.action}
               </Typography>
             </Box>
-          </TouchableOpacity>
+          </Link>
         </Box>
       </Box>
     </Box>

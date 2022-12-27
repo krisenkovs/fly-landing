@@ -1,8 +1,10 @@
+import { useSettings } from 'application/SettingsProvider';
 import { Box, TouchableOpacity, Typography } from 'components';
 import { COLORS } from 'constant';
 import React from 'react';
 
 export function Subscribe() {
+  const settings = useSettings();
   return (
     <Box position="relative" alignItems="center" backgroundColor={COLORS.LIGHT_BLUE}>
       <img src="images/circle.png" alt="circle" />
@@ -13,11 +15,11 @@ export function Subscribe() {
         style={{ top: 0, left: 0, right: 0, bottom: 0 }}
       >
         <Typography size={48} lineHeight={56} weight={900} color={COLORS.BLUE} textAlign="center">
-          Оставайтесь в курсе
+          {settings?.subscribe.title}
         </Typography>
         <Box marginTop={16}>
           <Typography size={20} lineHeight={24} weight={400} color={COLORS.BLACK} textAlign="center">
-            Не пропусти информацию о новых акциях и скидках
+            {settings?.subscribe.description}
           </Typography>
         </Box>
         <Box
@@ -33,7 +35,7 @@ export function Subscribe() {
         >
           <input
             style={{ fontSize: '18px', lineHeight: '24px', border: 'none', outline: 'none', minWidth: '400px' }}
-            placeholder="Введите email"
+            placeholder={settings?.subscribe.placeholder}
           />
           <TouchableOpacity>
             <Box
@@ -47,7 +49,7 @@ export function Subscribe() {
               backgroundColor={COLORS.BLUE}
             >
               <Typography size={18} lineHeight={24} weight={700} color={COLORS.WHITE}>
-                Подписаться
+                {settings?.subscribe.action}
               </Typography>
             </Box>
           </TouchableOpacity>

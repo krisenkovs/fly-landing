@@ -1,0 +1,10 @@
+export { Logo } from './Logo';
+export { MapPin } from './MapPin';
+export { Lighting } from './Lighting';
+export { Instagram } from './Instagram';
+export { Twitter } from './Twitter';
+export { Facebook } from './Facebook';
+export { Phone } from './Phone';
+export { Mail } from './Mail';
+export { Visa } from './Visa';
+export { Mir } from './Mir';
