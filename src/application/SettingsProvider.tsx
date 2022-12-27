@@ -68,7 +68,7 @@ export function SettingsProvider({ children }: PropsWithChildren) {
   const [settings, setSettings] = useState<Settings>();
 
   useEffect(() => {
-    fetch('/static/settings.json')
+    fetch('static/settings.json')
       .then((response) => response.json())
       .then((data) => setSettings(data));
   }, []);
