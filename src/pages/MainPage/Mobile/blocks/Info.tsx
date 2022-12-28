@@ -17,14 +17,14 @@ export function Info() {
       paddingBottom={32}
     >
       <Box alignItems="center">
-        <Typography size={32} lineHeight={40} weight={900} color={COLORS.WHITE}>
+        <Typography size={32} lineHeight={40} weight={900} color={COLORS.WHITE} textAlign="center">
           {settings?.info?.title}
         </Typography>
         <Box marginTop={16}>
-          <Typography size={18} lineHeight={26} weight={400} color={COLORS.WHITE}>
+          <Typography size={18} lineHeight={26} weight={400} color={COLORS.WHITE} textAlign="center">
             {settings?.info?.description1}
           </Typography>
-          <Typography size={18} lineHeight={26} weight={400} color={COLORS.WHITE}>
+          <Typography size={18} lineHeight={26} weight={400} color={COLORS.WHITE} textAlign="center">
             {settings?.info?.description2}
           </Typography>
         </Box>

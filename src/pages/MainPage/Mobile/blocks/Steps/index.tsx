@@ -10,7 +10,7 @@ export function Steps() {
   return (
     <Container>
       <Box paddingTop={40} paddingBottom={40} alignItems="center" paddingLeft={12} paddingRight={12}>
-        <Typography color={COLORS.BLACK} size={24} lineHeight={32} weight={900}>
+        <Typography color={COLORS.BLACK} size={24} lineHeight={32} weight={900} textAlign="center">
           {settings?.steps?.title}
         </Typography>
         <Box>
