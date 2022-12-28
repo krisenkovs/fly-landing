@@ -1,8 +1,13 @@
 import React from 'react';
 
-export function Logo() {
+type Props = {
+  width?: number;
+  height?: number;
+};
+
+export function Logo({ width = 152, height = 32 }: Props) {
   return (
-    <svg width="152" height="32" viewBox="0 0 152 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width} height={height} viewBox="0 0 152 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M35.9763 8.75296C35.9763 3.94849 32.0815 0 27.277 0C22.4726 0 18.5778 3.8948 18.5778 8.69928V17.6146H27.169C32.0332 17.6146 35.9763 13.6171 35.9763 8.75296Z"
         fill="#005EEB"

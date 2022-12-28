@@ -1,4 +1,4 @@
-import { Box } from 'components/index';
+import { Box } from 'components';
 import React, { PropsWithChildren } from 'react';
 
 type Props = PropsWithChildren;

@@ -8,3 +8,5 @@ export { Phone } from './Phone';
 export { Mail } from './Mail';
 export { Visa } from './Visa';
 export { Mir } from './Mir';
+export { MenuIcon } from './MenuIcon';
+export { CrossIcon } from './CrossIcon';

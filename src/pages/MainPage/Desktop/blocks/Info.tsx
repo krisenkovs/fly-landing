@@ -1,6 +1,7 @@
 import { useSettings } from 'application/SettingsProvider';
-import { Box, Container, Link, Typography } from 'components';
+import { Box, Link, Typography } from 'components';
 import { COLORS } from 'constant';
+import { Container } from 'pages/MainPage/Desktop/components/Container';
 import React from 'react';
 
 export function Info() {

@@ -1,6 +1,7 @@
 import { useSettings } from 'application/SettingsProvider';
-import { Box, Container, TouchableOpacity, Typography } from 'components';
+import { Box, TouchableOpacity, Typography } from 'components';
 import { COLORS } from 'constant';
+import { Container } from 'pages/MainPage/Desktop/components/Container';
 import React from 'react';
 import { Logo } from 'svg';
 

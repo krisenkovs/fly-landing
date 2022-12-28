@@ -1,7 +1,8 @@
 import { useSettings } from 'application/SettingsProvider';
-import { Box, Container, Typography } from 'components';
+import { Box, Typography } from 'components';
 import { COLORS } from 'constant';
-import { Item } from 'pages/MainPage/components/Steps/Item';
+import { Item } from 'pages/MainPage/Desktop/blocks/Steps/Item';
+import { Container } from 'pages/MainPage/Desktop/components/Container';
 import React from 'react';
 
 export function Steps() {
