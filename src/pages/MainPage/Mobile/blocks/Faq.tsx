@@ -7,16 +7,24 @@ import React from 'react';
 export function Faq() {
   const settings = useSettings();
   return (
-    <Box backgroundColor={COLORS.PALE_BLUE} paddingTop={80} paddingBottom={80} alignItems="center" id="faq">
-      <Box width={970}>
-        <Typography size={48} lineHeight={56} weight={900} color={COLORS.BLACK} textAlign="center">
-          {settings?.faq.title}
-        </Typography>
+    <Box
+      backgroundColor={COLORS.PALE_BLUE}
+      paddingTop={40}
+      paddingBottom={40}
+      alignItems="center"
+      id="faq"
+      paddingRight={12}
+      paddingLeft={12}
+    >
+      <Typography size={24} lineHeight={32} weight={900} color={COLORS.BLACK} textAlign="center">
+        {settings?.faq.title}
+      </Typography>
+      <Box marginTop={16}>
         {settings?.faq.items.map((item, index) => (
-          <Box marginTop={40} key={index}>
+          <Box marginTop={8} key={index}>
             <Collapse
               title={
-                <Typography size={24} lineHeight={36} weight={600} color={COLORS.BLUE}>
+                <Typography size={16} lineHeight={24} weight={600} color={COLORS.BLUE}>
                   {item.title}
                 </Typography>
               }

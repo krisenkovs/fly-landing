@@ -6,7 +6,7 @@ import { COLORS } from 'constant';
 import React, { useState, useMemo, useRef } from 'react';
 
 type Props = {
-  title: string;
+  title: React.ReactElement;
   content: string;
 };
 

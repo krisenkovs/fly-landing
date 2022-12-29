@@ -41,8 +41,6 @@ export function Header() {
         backgroundColor={COLORS.WHITE}
         flexDirection="row"
         alignItems="center"
-        //position="fixed"
-        //style={{ width: '100%' }}
       >
         <Box width={24} position="absolute" style={{ left: 12, top: 19 }}>
           <TouchableOpacity onPress={handleMenuClick}>{open ? <CrossIcon /> : <MenuIcon />}</TouchableOpacity>
