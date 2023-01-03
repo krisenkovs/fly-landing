@@ -6,7 +6,7 @@ import React from 'react';
 export function Help() {
   const settings = useSettings();
   return (
-    <Box alignItems="center" paddingTop={40} paddingBottom={40} paddingLeft={12} paddingRight={12}>
+    <Box alignItems="center" paddingTop={40} paddingLeft={12} paddingRight={12}>
       <Box>
         <Typography size={24} lineHeight={32} weight={700} color={COLORS.BLACK} textAlign="center">
           {settings?.help.title}
@@ -16,7 +16,7 @@ export function Help() {
             {settings?.help.description}
           </Typography>
         </Box>
-        <Box marginTop={32}>
+        <Box marginTop={32} marginBottom={40}>
           <Link href={`mailto:${settings?.help?.mail}`}>
             <Box
               alignItems="center"
@@ -34,6 +34,7 @@ export function Help() {
             </Box>
           </Link>
         </Box>
+        <img src="images/station_small.png" alt="station" />
       </Box>
     </Box>
   );

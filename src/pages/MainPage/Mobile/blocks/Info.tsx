@@ -6,17 +6,8 @@ import React from 'react';
 export function Info() {
   const settings = useSettings();
   return (
-    <Box
-      backgroundColor={COLORS.BLUE}
-      position="relative"
-      id="info"
-      justifyContent="flex-end"
-      paddingLeft={12}
-      paddingRight={12}
-      paddingTop={32}
-      paddingBottom={32}
-    >
-      <Box alignItems="center">
+    <Box backgroundColor={COLORS.BLUE} position="relative" id="info" justifyContent="flex-end" paddingLeft={12}>
+      <Box alignItems="center" paddingRight={12} paddingTop={32}>
         <Typography size={32} lineHeight={40} weight={900} color={COLORS.WHITE} textAlign="center">
           {settings?.info?.title}
         </Typography>
@@ -46,6 +37,9 @@ export function Info() {
             </Box>
           </Link>
         </Box>
+      </Box>
+      <Box alignItems="flex-end">
+        <img src="images/car_small.png" alt="car" />
       </Box>
     </Box>
   );
