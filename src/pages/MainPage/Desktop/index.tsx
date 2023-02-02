@@ -16,7 +16,6 @@ export function Desktop() {
       <Header />
       <Info />
       <Steps />
-      <Map />
       <Help />
       <Faq />
       <Tariff />

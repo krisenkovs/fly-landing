@@ -55,7 +55,7 @@ export function Collapse({ title, content }: Props) {
       <Box overflow="hidden" style={style} className={styles.content}>
         <Box refContainer={ref}>
           <Box marginTop={12}>
-            <Typography size={16} lineHeight={24} weight={400} color={COLORS.BLACK}>
+            <Typography size={16} lineHeight={24} weight={400} color={COLORS.BLACK} style={{ whiteSpace: 'pre-line' }}>
               {content}
             </Typography>
           </Box>

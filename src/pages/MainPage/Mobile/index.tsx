@@ -17,7 +17,6 @@ export function Mobile() {
       <Box overflow="auto">
         <Info />
         <Steps />
-        <Map />
         <Help />
         <Faq />
         <Tariff />

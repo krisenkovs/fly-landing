@@ -3,7 +3,25 @@ import { Box, Link, TouchableOpacity, Typography } from 'components';
 import { COLORS } from 'constant';
 import { Container } from 'pages/MainPage/Desktop/components/Container';
 import React from 'react';
-import { Facebook, Instagram, Logo, Mail, Mir, Phone, Twitter, Visa } from 'svg';
+import {
+  ApplePay,
+  BelCard,
+  BelCardInternet,
+  BePaid,
+  Facebook,
+  GooglePay,
+  IDCheck,
+  Instagram,
+  Logo,
+  Mail,
+  MasterCard,
+  Mir,
+  Phone,
+  SamsungPay,
+  Twitter,
+  Visa,
+  VisaSecure,
+} from 'svg';
 
 export function Footer() {
   const settings = useSettings();
@@ -25,11 +43,7 @@ export function Footer() {
                     {settings?.menu.info}
                   </Typography>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleLinkClick('map')}>
-                  <Typography color={COLORS.BLACK} size={16} lineHeight={24} weight={500}>
-                    {settings?.menu.map}
-                  </Typography>
-                </TouchableOpacity>
+
                 <TouchableOpacity onPress={() => handleLinkClick('faq')}>
                   <Typography color={COLORS.BLACK} size={16} lineHeight={24} weight={500}>
                     {settings?.menu.faq}
@@ -80,8 +94,17 @@ export function Footer() {
         paddingTop={24}
         paddingBottom={24}
       >
+        <BePaid />
+        <GooglePay />
+        <ApplePay />
+        <SamsungPay />
         <Visa />
         <Mir />
+        <VisaSecure />
+        <MasterCard />
+        <IDCheck />
+        <BelCard />
+        <BelCardInternet />
       </Box>
       <Box paddingTop={60} paddingBottom={60} alignItems="center">
         <Typography size={16} lineHeight={34} weight={400} color={COLORS.BLACK}>

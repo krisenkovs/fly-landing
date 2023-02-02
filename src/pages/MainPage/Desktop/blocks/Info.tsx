@@ -23,22 +23,20 @@ export function Info() {
             </Typography>
           </Box>
           <Box marginTop={40} flexDirection="row">
-            <Link href={settings?.info?.applicationUrl || ''}>
-              <Box
-                alignItems="center"
-                justifyContent="center"
-                borderRadius={12}
-                paddingTop={16}
-                paddingBottom={16}
-                paddingLeft={80}
-                paddingRight={80}
-                backgroundColor={COLORS.WHITE}
-              >
-                <Typography size={18} lineHeight={24} weight={700} color={COLORS.BLUE}>
-                  {settings?.info?.action}
-                </Typography>
-              </Box>
-            </Link>
+            <Box
+              alignItems="center"
+              justifyContent="center"
+              borderRadius={12}
+              paddingTop={16}
+              paddingBottom={16}
+              paddingLeft={80}
+              paddingRight={80}
+              backgroundColor={COLORS.WHITE}
+            >
+              <Typography size={18} lineHeight={24} weight={700} color={COLORS.BLUE}>
+                {settings?.info?.action}
+              </Typography>
+            </Box>
           </Box>
         </Container>
       </Box>

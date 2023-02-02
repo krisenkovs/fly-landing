@@ -30,11 +30,7 @@ export function Header() {
             {settings?.menu.info}
           </Typography>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleLinkClick('map')}>
-          <Typography color={COLORS.BLACK} size={16} lineHeight={24} weight={500}>
-            {settings?.menu.map}
-          </Typography>
-        </TouchableOpacity>
+
         <TouchableOpacity onPress={() => handleLinkClick('faq')}>
           <Typography color={COLORS.BLACK} size={16} lineHeight={24} weight={500}>
             {settings?.menu.faq}

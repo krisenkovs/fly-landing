@@ -114,6 +114,9 @@ module.exports = {
           to: 'images',
           noErrorOnMissing: true,
         },
+        {
+          from: resolve(__dirname, 'public/robots.txt'),
+        },
       ],
     }),
     new WorkboxPlugin.GenerateSW({
@@ -130,7 +133,7 @@ module.exports = {
               maxEntries: 40,
             },
           },
-        }
+        },
       ],
     }),
   ],
