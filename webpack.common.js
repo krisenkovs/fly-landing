@@ -98,10 +98,6 @@ module.exports = {
           to: 'fonts',
         },
         {
-          from: resolve(__dirname, 'public/locales'),
-          to: 'locales',
-        },
-        {
           from: resolve(__dirname, 'public/favicon'),
           to: 'favicon',
         },
@@ -116,6 +112,9 @@ module.exports = {
         },
         {
           from: resolve(__dirname, 'public/robots.txt'),
+        },
+        {
+          from: resolve(__dirname, 'public/sitemap.xml'),
         },
       ],
     }),

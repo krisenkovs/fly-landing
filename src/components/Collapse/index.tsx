@@ -22,7 +22,7 @@ export function Collapse({ title, content }: Props) {
     return { maxHeight: expanded ? ref?.current?.clientHeight : 0 };
   }, [expanded]);
   const styleIcon = useMemo(() => {
-    return { transform: expanded ? 'rotate(0deg)' : 'rotate(180deg)' };
+    return { transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)' };
   }, [expanded]);
 
   return (

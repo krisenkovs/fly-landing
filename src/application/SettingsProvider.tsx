@@ -6,6 +6,7 @@ export type Settings = {
     map: string;
     faq: string;
     tariff: string;
+    offer: string;
   };
   info: {
     title: string;

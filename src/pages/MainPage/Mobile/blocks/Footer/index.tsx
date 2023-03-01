@@ -17,7 +17,6 @@ import {
   Mir,
   Phone,
   SamsungPay,
-  Twitter,
   Visa,
   VisaSecure,
 } from 'svg';
@@ -25,8 +24,12 @@ import {
 export function Footer() {
   const settings = useSettings();
   function handleLinkClick(id: string) {
-    const element = document.getElementById(id);
-    element && element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (id === 'offer') {
+      window.open('https://batteryfly.by/files/public_offer.pdf');
+    } else {
+      const element = document.getElementById(id);
+      element && element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   return (
@@ -50,10 +53,16 @@ export function Footer() {
               {settings?.menu.tariff}
             </Typography>
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => handleLinkClick('offer')}>
+            <Typography color={COLORS.BLACK} size={16} lineHeight={24} weight={500}>
+              {settings?.menu.offer}
+            </Typography>
+          </TouchableOpacity>
         </Box>
         <Box flexDirection="row" gap={40}>
-          <Instagram />
-          <Twitter />
+          <a href="https://instagram.com/batteryfly.by" target="_blank" rel="noreferrer">
+            <Instagram />
+          </a>
           <Facebook />
         </Box>
         <Box gap={24}>
@@ -80,24 +89,33 @@ export function Footer() {
         alignItems="center"
         justifyContent="center"
         flexDirection="row"
-        gap={40}
         paddingTop={24}
         paddingBottom={24}
         paddingLeft={12}
         paddingRight={12}
-        style={{ flexWrap: 'wrap' }}
       >
-        <BePaid />
-        <GooglePay />
-        <ApplePay />
-        <SamsungPay />
-        <Visa />
-        <Mir />
-        <VisaSecure />
-        <MasterCard />
-        <IDCheck />
-        <BelCard />
-        <BelCardInternet />
+        <a href="https://bepaid.by" target="_blank" rel="noreferrer">
+          <Box
+            backgroundColor={COLORS.PALE_BLUE}
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="row"
+            gap={40}
+            style={{ flexWrap: 'wrap' }}
+          >
+            <BePaid />
+            <GooglePay />
+            <ApplePay />
+            <SamsungPay />
+            <Visa />
+            <Mir />
+            <VisaSecure />
+            <MasterCard />
+            <IDCheck />
+            <BelCard />
+            <BelCardInternet />
+          </Box>
+        </a>
       </Box>
       <Box paddingTop={40} paddingBottom={40} alignItems="center" paddingRight={12} paddingLeft={12} gap={14}>
         <Typography size={14} lineHeight={20} weight={400} color={COLORS.BLACK} textAlign="center">

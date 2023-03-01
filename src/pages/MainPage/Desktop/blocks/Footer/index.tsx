@@ -26,8 +26,12 @@ import {
 export function Footer() {
   const settings = useSettings();
   function handleLinkClick(id: string) {
-    const element = document.getElementById(id);
-    element && element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (id === 'offer') {
+      window.open('https://batteryfly.by/files/public_offer.pdf');
+    } else {
+      const element = document.getElementById(id);
+      element && element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   return (
@@ -54,10 +58,16 @@ export function Footer() {
                     {settings?.menu.tariff}
                   </Typography>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={() => handleLinkClick('offer')}>
+                  <Typography color={COLORS.BLACK} size={16} lineHeight={24} weight={500}>
+                    {settings?.menu.offer}
+                  </Typography>
+                </TouchableOpacity>
               </Box>
               <Box flexDirection="row" gap={24}>
-                <Instagram />
-                <Twitter />
+                <a href="https://instagram.com/batteryfly.by" target="_blank" rel="noreferrer">
+                  <Instagram />
+                </a>
                 <Facebook />
               </Box>
               <Box></Box>
@@ -93,24 +103,37 @@ export function Footer() {
         gap={80}
         paddingTop={24}
         paddingBottom={24}
+        paddingLeft={16}
+        paddingRight={16}
       >
-        <BePaid />
-        <GooglePay />
-        <ApplePay />
-        <SamsungPay />
-        <Visa />
-        <Mir />
-        <VisaSecure />
-        <MasterCard />
-        <IDCheck />
-        <BelCard />
-        <BelCardInternet />
+        <a href="https://bepaid.by" target="_blank" rel="noreferrer">
+          <Box alignItems="center" flexDirection="row" justifyContent="center" gap={80}>
+            <BePaid />
+
+            <GooglePay />
+            <ApplePay />
+            <SamsungPay />
+            <Visa />
+            <Mir />
+            <VisaSecure />
+            <MasterCard />
+            <IDCheck />
+            <BelCard />
+            <BelCardInternet />
+          </Box>
+        </a>
       </Box>
-      <Box paddingTop={60} paddingBottom={60} alignItems="center">
+      <Box paddingTop={60} paddingBottom={60} alignItems="center" paddingLeft={16} paddingRight={16}>
         <Typography size={16} lineHeight={34} weight={400} color={COLORS.BLACK}>
           {settings?.footer.address}
         </Typography>
-        <Typography size={16} lineHeight={34} weight={400} color={COLORS.BLACK}>
+        <Typography
+          size={16}
+          lineHeight={34}
+          weight={400}
+          color={COLORS.BLACK}
+          style={{ whiteSpace: 'pre-line', textAlign: 'center' }}
+        >
           {settings?.footer.bank}
         </Typography>
         <Box marginTop={12}>
